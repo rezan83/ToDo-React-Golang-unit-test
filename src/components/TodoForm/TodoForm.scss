@@ -1,0 +1,30 @@
+.todo-form {
+  color: white;
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  form {
+    width: clamp(20rem, 80%, 40rem);
+    display: flex;
+  }
+  input {
+    width: 70%;
+    height: 5vh;
+    border: 0;
+    outline: 0;
+    font-size: 1.5rem;
+    padding: 0.3rem;
+    &::placeholder {
+      color: gray;
+    }
+  }
+  button {
+    width: 30%;
+    height: 5vh;
+    background-color: hsl(180, 100%, 28%);
+    color: white;
+    border: 0;
+  }
+}

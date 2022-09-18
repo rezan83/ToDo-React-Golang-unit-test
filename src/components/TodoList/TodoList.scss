@@ -1,0 +1,29 @@
+.todo-list {
+    color: black;
+    margin-top: 4rem;
+    width: clamp(20rem, 80%, 40rem);
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+    color: white;
+    height: 2rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    button {
+        background-color: hsl(2, 100%, 75%);
+        border: 0;
+        color: hsl(228, 100%, 86%);
+        width: 1rem;
+        cursor: pointer;
+    }
+}
+
+.done {
+    background-color: hsl(0, 0%, 70%);
+    color: hsl(0, 0%, 85%);
+}

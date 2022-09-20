@@ -1,5 +1,6 @@
-# ToDo app with jest and RTL unit tests
+# ToDo app fullstack
 
-
-## State management done with Recoil
-
+## Frontend with React
+## Frontend unit tests with Jest and RTL 
+## Frontend State management done with Recoil
+## Backend with Go/Gin

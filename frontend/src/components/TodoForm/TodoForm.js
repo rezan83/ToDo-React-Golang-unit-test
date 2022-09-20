@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import { useRecoilState } from "recoil";
 import { TodosAtom } from "../../store";
@@ -8,10 +9,27 @@ const TodoForm = () => {
     const changeHandel = (e) => {
         set_todo(e.target.value);
     };
-    const clickHandel = (e) => {
+    const addHandel = (e) => {
         e.preventDefault();
-        let newTodo = { content: todo, done: false, id: Math.random() };
-        set_allTodos([newTodo, ...allTodos]);
+        const URL = "";
+        let newTodo = {
+            content: todo,
+            done: false,
+            id: (Math.random()+"")
+        };
+
+        axios
+            .post(URL, {
+                ...newTodo
+            })
+            .then((response) => response.data)
+            .then((data) => {
+                set_allTodos([newTodo, ...allTodos]);
+                console.log(data);
+            })
+
+            .catch((error) => console.log(error));
+
         set_todo("");
     };
 
@@ -25,7 +43,7 @@ const TodoForm = () => {
                     onChange={changeHandel}
                     value={todo}
                 />
-                <button onClick={clickHandel}>ADD</button>
+                <button onClick={addHandel}>ADD</button>
             </form>
         </div>
     );
